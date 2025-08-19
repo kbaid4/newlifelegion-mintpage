@@ -29,6 +29,18 @@
       "dest": "/logo.png"
     },
     {
+      "src": "/cool-cats.gif",
+      "dest": "/cool-cats.gif"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|json|txt))",
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
