@@ -38,6 +38,16 @@ const WalletContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 480px) {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 `;
 
 const WalletAmount = styled.div`
@@ -64,6 +74,20 @@ const WalletAmount = styled.div`
   vertical-align: middle;
   justify-content: flex-start;
   gap: 10px;
+  
+  @media (max-width: 768px) {
+    padding: 4px 4px 4px 12px;
+    min-width: 40px;
+    font-size: 0.9em;
+    gap: 8px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 3px 3px 3px 10px;
+    min-width: 36px;
+    font-size: 0.8em;
+    gap: 6px;
+  }
 `;
 
 const Wallet = styled.ul`
@@ -77,6 +101,16 @@ const ConnectButton = styled(WalletMultiButton)`
   padding: 6px 16px;
   background-color: #4E44CE;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 5px 14px;
+    font-size: 0.9em !important;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 4px 12px;
+    font-size: 0.8em !important;
+  }
 `;
 
 const NFT = styled(Paper)`
@@ -86,6 +120,20 @@ const NFT = styled(Paper)`
   flex: 1 1 auto;
   background-color: var(--card-background-color) !important;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  
+  @media (max-width: 768px) {
+    min-width: 90%;
+    max-width: 500px;
+    padding: 5px 15px 15px 15px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 480px) {
+    min-width: 95%;
+    max-width: 400px;
+    padding: 5px 10px 10px 10px;
+    margin: 0 auto;
+  }
 `;
 
 const Card = styled(Paper)`
@@ -97,6 +145,26 @@ const Card = styled(Paper)`
 
   h1 {
     margin: 0px;
+  }
+  
+  @media (max-width: 768px) {
+    margin: 3px;
+    min-width: 35px;
+    padding: 18px;
+    
+    h1 {
+      font-size: 1.5rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    margin: 2px;
+    min-width: 30px;
+    padding: 12px;
+    
+    h1 {
+      font-size: 1.2rem !important;
+    }
   }
 `;
 
@@ -150,6 +218,20 @@ const MainContainer = styled.div`
   margin-left: 4%;
   text-align: center;
   justify-content: center;
+  
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  
+  @media (max-width: 480px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
 `;
 
 const MintContainer = styled.div`
@@ -158,6 +240,16 @@ const MintContainer = styled.div`
   flex: 1 1 auto;
   flex-wrap: wrap;
   gap: 20px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const DesContainer = styled.div`
@@ -165,6 +257,14 @@ const DesContainer = styled.div`
   flex-direction: column;
   flex: 1 1 auto;
   gap: 20px;
+  
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
 
 const Price = styled(Chip)`
@@ -173,6 +273,16 @@ const Price = styled(Chip)`
   font-weight: bold;
   font-size: 1.2em !important;
   font-family: 'Patrick Hand', cursive !important;
+  
+  @media (max-width: 768px) {
+    margin: 3px;
+    font-size: 1em !important;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 2px;
+    font-size: 0.9em !important;
+  }
 `;
 
 const Image = styled.img`
@@ -180,6 +290,18 @@ const Image = styled.img`
   width: auto;
   border-radius: 7px;
   box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.5);
+  
+  @media (max-width: 768px) {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    height: 250px;
+    width: auto;
+    max-width: 100%;
+  }
 `;
 
 const BorderLinearProgress = styled(LinearProgress)`
@@ -197,6 +319,16 @@ const BorderLinearProgress = styled(LinearProgress)`
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
     background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
+  }
+  
+  @media (max-width: 768px) {
+    margin: 15px;
+    height: 8px !important;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 10px;
+    height: 6px !important;
   }
 `;
 
@@ -435,9 +567,17 @@ const Home = (props: HomeProps) => {
 
     const renderGoLiveDateCounter = ({days, hours, minutes, seconds}: any) => {
         return (
-            <div><Card elevation={1}><h1>{days}</h1>Days</Card><Card elevation={1}><h1>{hours}</h1>
-                Hours</Card><Card elevation={1}><h1>{minutes}</h1>Mins</Card><Card elevation={1}>
-                <h1>{seconds}</h1>Secs</Card></div>
+            <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                gap: '5px'
+            }}>
+                <Card elevation={1}><h1>{days}</h1>Days</Card>
+                <Card elevation={1}><h1>{hours}</h1>Hours</Card>
+                <Card elevation={1}><h1>{minutes}</h1>Mins</Card>
+                <Card elevation={1}><h1>{seconds}</h1>Secs</Card>
+            </div>
         );
     };
 
